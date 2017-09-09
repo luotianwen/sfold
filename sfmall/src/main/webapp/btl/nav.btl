@@ -1,0 +1,52 @@
+<div class="dorpdown" id="categorys-2014">
+    <div class="dt">
+        <a>全部商品分类</a>
+    </div>
+    <div class="dd">
+        <div class="dd-inner">
+            <% for(nav in navs){%>
+            <div class="item fore1">
+                <h3>${nav.name}</h3>
+            </div>
+            <%}%>
+        </div>
+        <div style="display: none;" class="dorpdown-layer" id="index_menus_sub">
+            <% for(nav in navs){%>
+            <div class="item-sub" style="display: block;">
+                <div   class="subitems">
+                    <% for(category in nav.child){%>
+                    <dl class="fore1">
+                        <dt>
+                            <% if(category.url!=null&&category.url!=""){%>
+                            <a target="_blank" href="http://${category.url}">
+                                <%}else{%>
+                                <a target="_blank" href="#">
+                                    <%}%>
+                                    ${category.descript}
+                                <i>
+                                    &gt;
+                                </i>
+                            </a>
+                        </dt>
+                        <dd>
+                            <% for(detail in category.child){%>
+                            <% if(detail.url!=null&&detail.url!=""){%>
+                            <a target="_blank" href="http://${detail.url}">
+                                <%}else{%>
+                                <a target="_blank" href="#">
+                                    <%}%>
+                                    ${detail.descript}
+                                </a>
+                                <%}%>
+                         </dd>
+                    </dl>
+                    <%}%>
+                </div>
+            </div>
+            <%}%>
+
+
+
+        </div>
+    </div>
+</div>

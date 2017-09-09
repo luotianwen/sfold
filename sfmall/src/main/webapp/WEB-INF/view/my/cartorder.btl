@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/head.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/order.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/rightnav.css"/>
+    <script src="/static/js/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/js/validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/static/js/validate/messages_zh.min.js"></script>
+    <script src="/static/js/xq.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/cartorder.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+<% include("/top_header.btl"){}%>
+<% include("/seek.btl",{page_name:'结算页'}){}%>
+<% include("/detailnav.btl"){}%>
+    <div class="boxw clearfix">
+        <div class=" box-title">
+            <h2>选择收货地址</h2>
+            <div class="fr"><a style="cursor: pointer" class="btn-edit"><i class="icon-edit"></i>管理收货地址</a><a href="javascript:void(0)" class="btn-add"><i class="icon-add"></i>新增收货地址</a></div>
+        </div>
+        <form id="addressform">
+            <input type="hidden" name="first" value="2">
+        <div class="form-address" style="display:none;">
+            <dl>
+                <dd style="padding-left:30px;">省：<select class="form-control" required id="province" name="province">
+                      <option value="">请选择</option><%if(!isEmpty(provinces))for(province in provinces){%> <option value="${province.id}">${province.name}</option> <%}%>
+                    </select>
+                    市：<select  class="form-control" required id="city" name="city"><option value="">请选择</option></select>
+                    区：<select class="form-control" required id="area" name="area"><option value="">请选择</option></select></dd></dl>
+            <dl><dt>详细地址：</dt><dd><textarea class="form-control" style="width:1000px" required name="address" id="address"></textarea></dd></dl>
+            <dl><dt>收货人：</dt><dd><input name="contacts" id="contacts" type="text" class="form-control w120" required/></dd></dl>
+            <dl><dt>手机号码：</dt><dd><input name="phone" id="phone" type="text" class="form-control w120" required/></dd></dl>
+            <div class="btn-area"><a href="javascript:void(0)" class="btn-confirm" id="addressbtn">确认地址</a><a href="javascript:void(0)" class="btn-cancel">取消</a></div>
+        </div>
+        </form>
+
+        <div class="address-list clearfix">
+
+
+        </div>
+        <div class="address-more"><a href="javascript:void(0)">显示全部地址<i class="arrow-down"></i></a></div>
+        <div class="box-title">
+            <h2>确认商品信息</h2>
+        </div>
+
+        <div class="goods-list clearfix">
+        </div>
+        <div class="box-title">
+            <h2>发票信息</h2>
+        </div>
+        <div class="invoice-info">
+            <span >普通发票（纸质） 个人 明细</span>
+            <a style="cursor: pointer" class="link-edit">修改</a>
+        </div>
+        <div class="box-title">
+            <h2>优惠方式</h2>
+        </div>
+        <div class="coupons">优惠券<i class="arrow-down"></i></div>
+        <div class="coupons-list clearfix">
+            <!--<div class="item">
+                <div class="c-txt"><span class="num">¥30</span><span>满¥199</span></div>
+                <div class="c-date">有效期至2017.5.31</div>
+            </div>
+            <div class="item">
+                <div class="c-txt"><span class="num">¥30</span><span>满¥199</span></div>
+                <div class="c-date">有效期至2017.5.31</div>
+            </div>
+            <div class="item">
+                <div class="c-txt"><span class="num">¥30</span><span>满¥199</span></div>
+                <div class="c-date">有效期至2017.5.31</div>
+            </div>
+            <div class="item">
+                <div class="c-txt"><span class="num">¥30</span><span>满¥199</span></div>
+                <div class="c-date">有效期至2017.5.31</div>
+            </div>-->
+        </div>
+        <div class="card-e">世峰E卡<i class="arrow-down"></i></div>
+        <div class="card-e-list clearfix">
+           <!-- <div class="item">
+                <ins>RMB</ins><span>80</span>
+            </div>
+            <div class="item">
+                <ins>RMB</ins><span>80</span>
+            </div>
+            <div class="item">
+                <ins>RMB</ins><span>80</span>
+            </div>
+            <div class="item">
+                <ins>RMB</ins><span>80</span>
+            </div>-->
+        </div>
+        <div class="order-summary clearfix">
+            <div class="statistic fr">
+                <div class="list">
+                    <span id="allnum"></span>
+                    <em class="price" id="allprice"> </em>
+                </div>
+                <div class="list">
+                    <span>优惠券抵扣：</span>
+                    <em class="price">-¥0.00</em>
+                </div>
+                <div class="list">
+                    <span>世峰E卡抵扣：</span>
+                    <em class="price">¥0.00</em>
+                </div>
+                <div class="list">
+                    <span>运费：</span>
+                    <em class="price" id="allfreight"> </em>
+                </div>
+            </div>
+        </div>
+        <div class="order-toolbar">
+            <div class="fl"><a href="/my/cart" class="btn-return"><i class="icon-return"></i>返回购物车</a></div>
+            <div class="fr"><span id="allnums"></span><span class="total">总计：<b class="txt-red-24" id="allPriceFreight"></b></span><a style="cursor: pointer" class="btn-pay">确认并支付</a></div>
+        </div>
+    </div>
+    <!--弹出框 -->
+    <div class="pop-box" style="display: none">
+        <div class="mt"><h1>发票信息</h1><a style="cursor: pointer" class="close closessss" title="关闭"></a></div>
+        <div class="mc">
+            <dl class="clearfix">
+                <dt>发票类型：</dt>
+                <dd><a class="options selected">普通发票<i></i></a></dd>
+            </dl>
+            <dl class="clearfix">
+                <dt>发票抬头：</dt>
+                <dd>
+                    <a class="options selected">个人<i></i></a>
+                    <a class="options">单位<i></i></a>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt>备注：</dt>
+                <dd><textarea class="form-control" style="width:400px"></textarea></dd>
+            </dl>
+            <div class="btns"><a class="btn-confirm" style="cursor: pointer">确认</a>
+                <a class="btn-cancel closessss" style="cursor: pointer">取消</a></div>
+            <div class="tips">注：开票金额不包括优惠券、世峰E卡等支付部分。</div>
+        </div>
+    </div>
+<% include("/rightnav.btl"){}%>
+<% include("/footer.btl"){}%>
+</body>
+</html>

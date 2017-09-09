@@ -1,0 +1,476 @@
+@font-size-base: 75;
+
+#order-submit {
+  /*header*/
+  .order-submit-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    border-bottom: 1px solid #b0b0b0;
+    .vux-header {
+      border: 0 !important;
+    }
+  }
+  /*content*/
+  #order-content-wrapper {
+    position: relative;
+    width: 100%;
+    user-select: none;
+    touch-action: auto;
+    top: 88rem/@font-size-base;
+    overflow: hidden;
+    margin-bottom: 178rem/@font-size-base;
+    .order-content-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      /*地址*/
+      .address-wrapper {
+        position: relative;
+        display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+        display: -moz-box; /* 老版本语法: Firefox (buggy) */
+        display: -ms-flexbox; /* 混合版本语法: IE 10 */
+        display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+        display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+        width: 100%;
+        background: #ffffff url('../../assets/image/cart/icon_addr_border.png') repeat-x bottom;
+        background-size: 66px 2px;
+        -moz-background-size: 66px 2px; /* 老版本的 Firefox */
+        border-bottom: 18rem/@font-size-base solid #ededed;
+        .content-wrapper {
+          flex: 1;
+          .user-info-wrapper {
+            margin: 28rem/@font-size-base 70rem/@font-size-base;
+            font-size: 30rem/@font-size-base;
+            color: #3d4245;
+            .name {
+              display: inline-block;
+              margin-right: 44rem/@font-size-base;
+            }
+            .phone {
+              display: inline-block;
+            }
+          }
+          .address-info-wrapper {
+            display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box; /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox; /* 混合版本语法: IE 10 */
+            display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+            display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+            margin-bottom: 24rem/@font-size-base;
+            .img-location {
+              flex: 0 0 auto;
+              margin: 0 24rem/@font-size-base auto 30rem/@font-size-base;
+              width: 22rem/@font-size-base;
+              height: 30rem/@font-size-base;
+            }
+            .info {
+              flex: 1;
+              font-size: 24rem/@font-size-base;
+              color: #3d4245;
+              line-height: 34rem/@font-size-base;
+            }
+          }
+        }
+        .img-wrapper {
+          flex: 0 0 auto;
+          display: block;
+          margin: auto;
+          img {
+            margin: auto 22rem/@font-size-base auto 24rem/@font-size-base;
+            width: 14rem/@font-size-base;
+            height: 24rem/@font-size-base;
+          }
+        }
+      }
+      /*购买商品列表信息*/
+      .goods-wrapper {
+        position: relative;
+        padding: 0 22rem/@font-size-base;
+        border-bottom: 18rem/@font-size-base solid #ededed;
+        .shop-name {
+          height: 88rem/@font-size-base;
+          line-height: 88rem/@font-size-base;
+          font-size: 24rem/@font-size-base;
+          color: #3d4245;
+          border-bottom: 2px solid #e0e0e0;
+        }
+        /*商品信息*/
+        .goods-info-wrapper {
+          position: relative;
+          display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+          display: -moz-box; /* 老版本语法: Firefox (buggy) */
+          display: -ms-flexbox; /* 混合版本语法: IE 10 */
+          display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+          display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+          padding: 16rem/@font-size-base 0;
+          .goods-img {
+            flex: 0 0 auto;
+            width: 200rem/@font-size-base;
+            height: 200rem/@font-size-base;
+            margin-right: 24rem/@font-size-base;
+          }
+          .goods-desc {
+            flex: 1;
+            position: relative;
+            padding: 6rem/@font-size-base 0;
+            .goods-title {
+              font-size: 24rem/@font-size-base;
+              color: #3d4245;
+              line-height: 32rem/@font-size-base;
+            }
+            .price-wrapper {
+              position: absolute;
+              display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+              display: -moz-box; /* 老版本语法: Firefox (buggy) */
+              display: -ms-flexbox; /* 混合版本语法: IE 10 */
+              display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+              display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+              bottom: 0;
+              left: 0;
+              right: 0;
+              .rmb {
+                display: block;
+                flex: 0 0 auto;
+                margin: auto 10rem/@font-size-base auto 0;
+                font-size: 20rem/@font-size-base;
+                color: #3d4245;
+              }
+              .price {
+                flex: 1;
+                display: inline-block;
+                font-size: 28rem/@font-size-base;
+                color: #3d4245;
+              }
+              .count {
+                flex: 0 0 auto;
+                display: inline-block;
+                float: right;
+                margin: auto 0;
+                font-size: 24rem/@font-size-base;
+                color: #999999;
+              }
+            }
+          }
+
+        }
+        /*赠品*/
+        .gift-wrapper {
+          position: relative;
+          margin-top: 28rem/@font-size-base;
+          display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+          display: -moz-box; /* 老版本语法: Firefox (buggy) */
+          display: -ms-flexbox; /* 混合版本语法: IE 10 */
+          display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+          display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+          width: 100%;
+          .txt-gift {
+            flex: 0 0 auto;
+            font-size: 24rem/@font-size-base;
+            color: #3d4245;
+            margin-right: 24rem/@font-size-base;
+          }
+          .gift-list {
+            position: relative;
+            flex: 1;
+            .gift-item {
+              .gift-desc {
+                display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+                display: -moz-box; /* 老版本语法: Firefox (buggy) */
+                display: -ms-flexbox; /* 混合版本语法: IE 10 */
+                display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+                display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+                font-size: 24rem/@font-size-base;
+                color: #999999;
+                margin-bottom: 24rem/@font-size-base;
+                .gift-name {
+                  flex: 1;
+                  display: inline-block;
+                }
+                .gift-count {
+                  flex: 0 0 auto;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+        /*店铺优惠*/
+        .shop-coupon-wrapper {
+          display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+          display: -moz-box; /* 老版本语法: Firefox (buggy) */
+          display: -ms-flexbox; /* 混合版本语法: IE 10 */
+          display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+          display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+          width: 100%;
+          height: 88rem/@font-size-base;
+          color: #3d4245;
+          border-top: 1px solid #e0e0e0;
+          line-height: 90rem/@font-size-base;
+          .txt {
+            flex: 0 0 auto;
+            font-size: 28rem/@font-size-base;
+          }
+          .coupon-info {
+            flex: 1;
+            display: inline-block;
+            margin-right: 24rem/@font-size-base;
+            font-size: 26rem/@font-size-base;
+            text-align: right;
+          }
+          img {
+            flex: 0 0 auto;
+            display: block;
+            margin: auto;
+            width: 14rem/@font-size-base;
+            height: 24rem/@font-size-base;
+          }
+        }
+        /*运费信息*/
+        .carriage-wrapper {
+          display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+          display: -moz-box; /* 老版本语法: Firefox (buggy) */
+          display: -ms-flexbox; /* 混合版本语法: IE 10 */
+          display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+          display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+          width: 100%;
+          height: 88rem/@font-size-base;
+          color: #3d4245;
+          border-top: 1px solid #e0e0e0;
+          line-height: 90rem/@font-size-base;
+          .txt {
+            flex: 1;
+            font-size: 28rem/@font-size-base;
+          }
+          .txt-courier, .rmb, .carriage {
+            flex: 0 0 auto;
+            font-size: 26rem/@font-size-base;
+          }
+          .rmb {
+            margin: 0 6rem/@font-size-base;
+          }
+        }
+        /*发票信息*/
+        .invoice-wrapper {
+          display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+          display: -moz-box; /* 老版本语法: Firefox (buggy) */
+          display: -ms-flexbox; /* 混合版本语法: IE 10 */
+          display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+          display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+          width: 100%;
+          height: 88rem/@font-size-base;
+          color: #3d4245;
+          border-top: 1px solid #e0e0e0;
+          line-height: 90rem/@font-size-base;
+          .txt {
+            flex: 0 0 auto;
+            font-size: 28rem/@font-size-base;
+          }
+          .invoice-info {
+            flex: 1;
+            display: inline-block;
+            margin-right: 24rem/@font-size-base;
+            font-size: 26rem/@font-size-base;
+            text-align: right;
+          }
+          img {
+            flex: 0 0 auto;
+            display: block;
+            margin: auto;
+            width: 14rem/@font-size-base;
+            height: 24rem/@font-size-base;
+          }
+        }
+        /*买家留言*/
+        .buyer-msg-wrapper {
+          display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+          display: -moz-box; /* 老版本语法: Firefox (buggy) */
+          display: -ms-flexbox; /* 混合版本语法: IE 10 */
+          display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+          display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+          width: 100%;
+          color: #3d4245;
+          padding: 28rem/@font-size-base 0;
+          border-top: 1px solid #e0e0e0;
+          .txt {
+            flex: 0 0 auto;
+            display: inline-block;
+            margin: auto 12rem/@font-size-base 0 0;
+          }
+          .buyer-msg {
+            flex: 1;
+          }
+        }
+        /*商品小计*/
+        .group-total-wrapper {
+          display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+          display: -moz-box; /* 老版本语法: Firefox (buggy) */
+          display: -ms-flexbox; /* 混合版本语法: IE 10 */
+          display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+          display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+          width: 100%;
+          height: 88rem/@font-size-base;
+          color: #3d4245;
+          border-top: 1px solid #e0e0e0;
+          line-height: 90rem/@font-size-base;
+          .txt {
+            flex: 1;
+            display: inline-block;
+            color: #3d4245;
+            font-size: 24rem/@font-size-base;
+            text-align: right;
+          }
+          .rmb {
+            flex: 0 0 auto;
+            display: inline-block;
+            color: #ff5b28;
+            font-size: 20rem/@font-size-base;
+            margin-right: 8rem/@font-size-base;
+            margin-left: 20rem/@font-size-base;
+          }
+          .group-total-price {
+            flex: 0 0 auto;
+            color: #ff5b28;
+            font-size: 32rem/@font-size-base;
+          }
+        }
+      }
+      /*其他相关*/
+      .other-wrapper {
+        position: relative;
+        padding: 0 22rem/@font-size-base;
+        border-bottom: 18rem/@font-size-base solid #ededed;
+        .coupon-wrapper, .sf-card-wrapper {
+          display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+          display: -moz-box; /* 老版本语法: Firefox (buggy) */
+          display: -ms-flexbox; /* 混合版本语法: IE 10 */
+          display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+          display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+          width: 100%;
+          height: 88rem/@font-size-base;
+          color: #3d4245;
+          border-bottom: 1px solid #e0e0e0;
+          .txt {
+            flex: 0 0 auto;
+            display: inline-block;
+            font-size: 28rem/@font-size-base;
+            line-height: 88rem/@font-size-base;
+            margin-right: 22rem/@font-size-base;
+          }
+          .coupon-count {
+            flex: 0 0 auto;
+            display: block;
+            margin: auto;
+            color: #ffffff;
+            font-size: 22rem/@font-size-base;
+            padding: 3px 6px;
+            background-color: #06b639;
+            border-radius: 5rem/@font-size-base;
+          }
+          .used-state {
+            flex: 1;
+            display: inline-block;
+            margin-right: 24rem/@font-size-base;
+            font-size: 26rem/@font-size-base;
+            text-align: right;
+            line-height: 88rem/@font-size-base;
+          }
+          img {
+            flex: 0 0 auto;
+            display: block;
+            margin: auto;
+            width: 14rem/@font-size-base;
+            height: 24rem/@font-size-base;
+          }
+        }
+        /*匿名购买*/
+        .anonymous-wrapper {
+          position: relative;
+          width: 100%;
+          height: 88rem/@font-size-base;
+          color: #3d4245;
+          font-size: 28rem/@font-size-base;
+          .txt {
+            position: absolute;
+            left: 0;
+            top: 30rem/@font-size-base;
+          }
+          .anonymous-switcher {
+            position: absolute;
+            right: -15px;
+          }
+        }
+      }
+    }
+  }
+  /*浮动地址提示*/
+  .float-address-wrapper{
+    position: fixed;
+    background-color: #dff7e4;
+    bottom: 98rem/@font-size-base;
+    left: 0;
+    right: 0;
+    .txt{
+      display: inline-block;
+      font-size: 24rem/@font-size-base;
+      color: #3d4245;
+      line-height: 30rem/@font-size-base;
+      margin: 12rem/@font-size-base 22rem/@font-size-base;
+    }
+  }
+  /*footer 提交订单*/
+  .order-submit-wrapper {
+    position: fixed;
+    bottom: 0;
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+    background-color: #ffffff;
+    width: 100%;
+    height: 97rem/@font-size-base;
+    border-top: 1px solid #e0e0e0;
+    .total-info-wrapper {
+      flex: 1;
+      line-height: 98rem/@font-size-base;
+      text-align: right;
+      .buy-count-wrapper {
+        display: inline-block;
+        font-size: 22rem/@font-size-base;
+        color: #3d4245;
+        .buy-count {
+          color: #ff5b28;
+        }
+      }
+      .rmb {
+        display: inline-block;
+        color: #ff5b28;
+        font-size: 20rem/@font-size-base;
+        margin: 0 8rem/@font-size-base 0 10rem/@font-size-base;
+      }
+      .total-price {
+        display: inline-block;
+        margin-right: 12rem/@font-size-base;
+        color: #ff5b28;
+        font-size: 32rem/@font-size-base;
+      }
+    }
+    .btn-submit-order {
+      flex: 0 0 280rem/@font-size-base;
+      width: 280rem/@font-size-base;
+      height: 98rem/@font-size-base;
+      line-height: 98rem/@font-size-base;
+      background-color: #06b639;
+      color: #ffffff;
+      font-size: 28rem/@font-size-base;
+      text-align: center;
+      &:active {
+        background-color: #069639;
+      }
+    }
+  }
+
+}

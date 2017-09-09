@@ -1,0 +1,34 @@
+<!--header-->
+<div class="h_container h_header">
+    <div class="boxw">
+        <p class="slogan fl">Hi,欢迎来到世峰户外!</p>
+        <div class="QR_code fr">
+            <i></i>
+            <a>二维码</a>
+            <div class="code">
+                <em class="triangle"></em>
+                <ul>
+                    <li><img src="/static/img/all/android.jpg" /><span>APP下载</span></li>
+                    <li><img src="/static/img/all/gzh.jpg" /><span>服务号</span></li>
+                    <li><img src="/static/img/all/dyh.jpg" /><span>订阅号</span></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="member fr">
+            <i></i>
+            <%
+            if(isEmpty(session.MALL_SESSION_USER)){ %>
+            <a href="/login" >登录</a>
+            <a href="/reg" target="_blank">注册</a>
+            <%}
+            else{%>
+            <a href="/my/Index.html">${session.MALL_SESSION_USER.uName}</a>
+            <a href="/logout">退出登录</a>
+            <%}
+            %>
+
+        </div>
+    </div>
+</div>
+<!--header-->

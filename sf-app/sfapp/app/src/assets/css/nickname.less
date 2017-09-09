@@ -1,0 +1,62 @@
+@font-size-base: 75;
+.nickname{
+    font-family: "microsoft yahei";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ededed;
+    z-index:9999;
+}
+.nickname_header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.nickname_content{
+   position: relative;
+   top: 88rem/@font-size-base;
+    .weui-cells{
+        .weui-cell{
+            padding:0  28rem/@font-size-base!important;
+            height: 88rem/@font-size-base !important;
+            font-size: 28rem/@font-size-base;
+            color: #3d4245;
+            &:active{
+               background-color: #fff !important;
+            }
+            .weui-cell__bd{
+                padding: 0 !important;
+                width: 100%;
+                height: 100%;
+                input{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+    .preserve{
+        width: 678rem/@font-size-base;
+        height: 88rem/@font-size-base;
+        margin: 54rem/@font-size-base 0 0 36rem/@font-size-base;
+        border: 1px solid #009ff2;
+        border-radius: 10rem/@font-size-base;
+        background: #fff;
+        color: #009ff2;
+        font-size: 30rem/@font-size-base;
+        font-weight: 500;
+
+    //  &.active{
+    //      color: #fff;
+    //      background: #009ff2;
+    //  }
+    }
+  .preserve_active{
+    color: #fff;
+    background: #009ff2;
+  }
+
+}

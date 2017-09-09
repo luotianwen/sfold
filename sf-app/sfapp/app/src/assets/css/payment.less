@@ -1,0 +1,222 @@
+@font-size-base: 75;
+.payment {
+    font-family: "microsoft yahei";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+.pm_header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    .amend {
+        display: inline-block;
+        width: 38rem/@font-size-base;
+        height: 36rem/@font-size-base;
+        position: absolute;
+        right: 113rem/@font-size-base;
+        background: url(../image/goods/menu_shopping_cart.png) no-repeat;
+        background-size: 100%;
+        top: 50%;
+        margin-top: -18rem/@font-size-base;
+    }
+    &.a_brfore {
+        .vux-header-right {
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 10rem/@font-size-base;
+                height: 10rem/@font-size-base;
+                border-radius: 6rem/@font-size-base;
+                background-clip: padding-box;
+                background-color: #f74c31;
+                right: -2rem/@font-size-base;
+                top: 0;
+            }
+        }
+    }
+}
+
+.pm_content {
+    position: relative;
+    top: 88rem/@font-size-base;
+    background: #FFFFFF;
+    .pm_title {
+        background-color: #06B639;
+        padding: 70rem/@font-size-base 0 74rem/@font-size-base 40rem/@font-size-base;
+        color: #fff;
+        letter-spacing: 2rem/@font-size-base;
+        p {
+            font-size: 32rem/@font-size-base;
+            padding-bottom: 18rem/@font-size-base;
+        }
+        span {
+            font-size: 28rem/@font-size-base;
+        }
+    }
+    .pm_site {
+        height: 146rem/@font-size-base;
+        .pm_logo {
+            width: 78rem/@font-size-base;
+            position: relative;
+            float: left;
+            display: inline-block;
+            height: 100%;
+            i {
+                position: absolute;
+                top: 50%;
+                margin: 0 24rem/@font-size-base;
+                margin-top: -15rem/@font-size-base;
+                display: inline-block;
+                width: 22rem/@font-size-base;
+                height: 30rem/@font-size-base;
+                background: url(../image/indent/location_img.png) no-repeat;
+                background-size: 100%;
+            }
+        }
+        .site_msg {
+            font-size: 24rem/@font-size-base;
+            border-bottom: 1px solid #e0e0e0;
+            .recipients {
+                padding-top: 24rem/@font-size-base;
+                padding-bottom: 18rem/@font-size-base;
+                padding-right: 24rem/@font-size-base;
+                .phone {
+                    float: right;
+                }
+            }
+            .place {
+                line-height: 30rem/@font-size-base;
+                padding-right: 22rem/@font-size-base;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin-bottom: 24rem/@font-size-base;
+            }
+        }
+    }
+    .information {
+        font-size: 24rem/@font-size-base;
+        border-bottom: 18rem/@font-size-base solid #ededed;
+        p {
+            color: #3d4245;
+            padding: 24rem/@font-size-base 0 0 22rem/@font-size-base;
+        }
+        .check_btn {
+            display: inline-block;
+            width: 158rem/@font-size-base;
+            height: 58rem/@font-size-base;
+            line-height: 58rem/@font-size-base;
+            text-align: center;
+            border: 1px solid #999999;
+            border-radius: 3px;
+            margin-top: 54rem/@font-size-base;
+            margin-left: 296rem/@font-size-base;
+            margin-bottom: 30rem/@font-size-base;
+            color: #3D4245;
+            &:active {
+                background-color: #e0e0e0;
+            }
+        }
+    }
+    .pm_reminder {
+        padding: 24rem/@font-size-base 22rem/@font-size-base;
+        font-size: 22rem/@font-size-base;
+        color: #999999;
+        line-height: 30rem/@font-size-base;
+        i {
+            color: #06B639;
+        }
+    }
+    .guess_like {
+        .title {
+            padding: 0 216rem/@font-size-base;
+            background-color: #ededed;
+            .vux-divider {
+                font-size: 24rem/@font-size-base !important;
+                color: #999999 !important;
+                padding-bottom: 54rem/@font-size-base;
+            }
+        }
+        .shop_news {
+            h1 {
+                font-size: 24rem/@font-size-base;
+                color: #3d4245;
+                background-color: #ededed;
+                padding-left: 22rem/@font-size-base;
+                padding-bottom: 24rem/@font-size-base;
+            }
+            .shop_list {
+                min-height: 1000rem/@font-size-base;
+                li {
+                    float: left;
+                    width: 50%;
+                    border-bottom: 1px solid #e0e1e1;
+                    border-left: 1px solid #e0e1e1;
+                    margin-left: -1px;
+                    padding: 12rem/@font-size-base 0;
+                    overflow: hidden;
+                    .list_item {
+                        display: block;
+                        padding: 0 12rem/@font-size-base;
+                        .p {
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 5rem/@font-size-base;
+                            margin-left: 0;
+                            overflow: hidden;
+                            a {
+                                text-align: center;
+                                width: 100%;
+                                padding: 50% 0;
+                                height: 0;
+                                display: inline-block;
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+                            }
+                        }
+                        .d {
+                            a {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                line-height: 30rem/@font-size-base;
+                                font-size: 24rem/@font-size-base;
+                            }
+                            .price {
+                                line-height: 12rem/@font-size-base;
+                                height: 12rem/@font-size-base;
+                                margin-top: 30rem/@font-size-base;
+                                .privilege {
+                                    color: #FF5B28;
+                                    font-size: 20rem/@font-size-base;
+                                    i {
+                                        font-size: 28rem/@font-size-base;
+                                    }
+                                }
+                                .original {
+                                    font-size: 10rem/@font-size-base;
+                                    margin-left: 5rem/@font-size-base;
+                                    text-decoration: line-through;
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

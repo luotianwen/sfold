@@ -1,0 +1,280 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"browser-package\" value=\"Camera\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.cordova.sfapp"
+        },
+        "cordova-plugin-alipay": {
+            "PARTNER_ID": "2088701539723278",
+            "SELLER_ACCOUNT": "837978734@qq.com",
+            "PRIVATE_KEY": "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKpAWujv/1sAVcif/iT9YGlpCHP4QTt+DZZaWvHiaAsKnDQurhVTgsMAjBTmjVcSeUYNcWQ+k9r+DMIzbI3G8rgkwppVYItrd3N2r5UIEkymsyhm9eVnqgqfc7mYtwPH9qkiSe13BvfS6e4o5UIUsc6JMTkbnTcIwHLhUCi4L4A1AgMBAAECgYBoyNMrKwtvZvVlVZOGEKyWNB8PwWvkweB6+YGf/kkrAozBUTmzxoJkoqGU+5FiVexuQTfZCurVjicsH5pgaGJaEpeSO3TXz3t1SAneNKEddtQTbrcQBAQ+pJkT9p8YvXXbb1lT+2ZAhf0Az049rWjLzJMG7qh/BAJ4HT6/FEXcwQJBANkU0r8PKGgHXRYWRxG80HidnhrxnwFS9a2ph7BMnq4ky/fXMId6gd8djsPOza94IYjUx4y8Ndt2Iuc5aWnfhXsCQQDIxjjK+dUf86l/K34a5Skqay5HE2ne83KDw/I9ZBpiVU+ThOTQTwz6AiY/UXj+HS8mjNv3+9PovJPP5z8iaaoPAkBuoDP99cWLriT7+oJhQa2jqf9Gj9eOHy7gP0LMz18WM95WAS3T/NRuVWvJ0Xv0be35AyZmTAvOOVf0KcfUkno9AkBxgbc78ZBvFvc9YR5TIDlstNmd7zjMhf+4xL+fu4c7DpYFhX1C0143vZ1X8LyhlWhBuCLoCOQd0PcT8916nBg7AkA25UueyeMLaU7g0S/EbbDTl4dP+kBXxYvNzDuDQygHV5aX8SSSCojT+dMfQVqihkZ87o0k+MGSBTnvfr0aKkS4",
+            "PACKAGE_NAME": "com.cordova.sfapp"
+        },
+        "cordova-plugin-wechat": {
+            "WECHATAPPID": "wx2e1deda16bcced1d",
+            "PACKAGE_NAME": "com.cordova.sfapp"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.cordova.sfapp"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.cordova.sfapp"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.cordova.sfapp"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-alipay/www/alipay.js",
+            "id": "cordova-plugin-alipay.alipay",
+            "pluginId": "cordova-plugin-alipay",
+            "clobbers": [
+                "alipay"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-wechat/www/wechat.js",
+            "id": "cordova-plugin-wechat.Wechat",
+            "pluginId": "cordova-plugin-wechat",
+            "clobbers": [
+                "Wechat"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+            "id": "cordova-plugin-camera.Camera",
+            "pluginId": "cordova-plugin-camera",
+            "clobbers": [
+                "Camera"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+            "id": "cordova-plugin-camera.CameraPopoverOptions",
+            "pluginId": "cordova-plugin-camera",
+            "clobbers": [
+                "CameraPopoverOptions"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/Camera.js",
+            "id": "cordova-plugin-camera.camera",
+            "pluginId": "cordova-plugin-camera",
+            "clobbers": [
+                "navigator.camera"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/src/browser/CameraProxy.js",
+            "id": "cordova-plugin-camera.CameraProxy",
+            "pluginId": "cordova-plugin-camera",
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
+            "id": "cordova-plugin-file.DirectoryEntry",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.DirectoryEntry"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/DirectoryReader.js",
+            "id": "cordova-plugin-file.DirectoryReader",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.DirectoryReader"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/Entry.js",
+            "id": "cordova-plugin-file.Entry",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.Entry"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/File.js",
+            "id": "cordova-plugin-file.File",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.File"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/FileEntry.js",
+            "id": "cordova-plugin-file.FileEntry",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileEntry"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/FileError.js",
+            "id": "cordova-plugin-file.FileError",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileError"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/FileReader.js",
+            "id": "cordova-plugin-file.FileReader",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileReader"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/FileSystem.js",
+            "id": "cordova-plugin-file.FileSystem",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileSystem"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/FileUploadOptions.js",
+            "id": "cordova-plugin-file.FileUploadOptions",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileUploadOptions"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/FileUploadResult.js",
+            "id": "cordova-plugin-file.FileUploadResult",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileUploadResult"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/FileWriter.js",
+            "id": "cordova-plugin-file.FileWriter",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileWriter"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/Flags.js",
+            "id": "cordova-plugin-file.Flags",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.Flags"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/LocalFileSystem.js",
+            "id": "cordova-plugin-file.LocalFileSystem",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.LocalFileSystem"
+            ],
+            "merges": [
+                "window"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/Metadata.js",
+            "id": "cordova-plugin-file.Metadata",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.Metadata"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/ProgressEvent.js",
+            "id": "cordova-plugin-file.ProgressEvent",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.ProgressEvent"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/fileSystems.js",
+            "id": "cordova-plugin-file.fileSystems",
+            "pluginId": "cordova-plugin-file"
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/requestFileSystem.js",
+            "id": "cordova-plugin-file.requestFileSystem",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.requestFileSystem"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js",
+            "id": "cordova-plugin-file.resolveLocalFileSystemURI",
+            "pluginId": "cordova-plugin-file",
+            "merges": [
+                "window"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/browser/isChrome.js",
+            "id": "cordova-plugin-file.isChrome",
+            "pluginId": "cordova-plugin-file",
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/browser/Preparing.js",
+            "id": "cordova-plugin-file.Preparing",
+            "pluginId": "cordova-plugin-file",
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-file/src/browser/FileProxy.js",
+            "id": "cordova-plugin-file.browserFileProxy",
+            "pluginId": "cordova-plugin-file",
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/fileSystemPaths.js",
+            "id": "cordova-plugin-file.fileSystemPaths",
+            "pluginId": "cordova-plugin-file",
+            "merges": [
+                "cordova"
+            ],
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-file/www/browser/FileSystem.js",
+            "id": "cordova-plugin-file.firefoxFileSystem",
+            "pluginId": "cordova-plugin-file",
+            "merges": [
+                "window.FileSystem"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.2",
+        "cordova-plugin-alipay": "0.10.0",
+        "cordova-plugin-wechat": "1.4.0",
+        "cordova-plugin-compat": "1.1.0",
+        "cordova-plugin-camera": "2.4.0",
+        "cordova-plugin-file": "4.3.2"
+    }
+}

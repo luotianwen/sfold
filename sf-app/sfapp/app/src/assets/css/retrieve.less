@@ -1,0 +1,76 @@
+@font-size-base: 75;
+
+.retrieve{
+    font-family: "microsoft yahei";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
+.re_header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    .vux-header {
+        border: 0 !important;
+    }
+}
+.re_content {
+    width: auto;
+    font-family: "microsoft yahei";
+    position: relative;
+    top: 196rem/@font-size-base;
+    .retrieve_password{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .weui-cells{
+        .vux-x-input{
+            &:active{
+                background: #ffffff !important;
+            }
+            .weui-cell__hd{
+                color: #3d4245 !important;
+                font-size: 28rem/@font-size-base !important;
+            }
+        }
+        &:before {
+            border: 0 !important;
+        }
+        &:after{
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            border-bottom: 1px solid #D9D9D9;
+            color: #D9D9D9;
+            -webkit-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(0.5);
+            -ms-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            left: 15px;
+        }
+    }
+    .re_btn {
+        padding:0 36rem/@font-size-base;
+        margin-top: 54rem/@font-size-base;
+        font-size: 30rem/@font-size-base !important;
+        .weui-btn_plain-primary{
+            color: #99d9fa !important;
+            border: 1px solid #99d9fa !important;
+
+        }
+      .weui-btn_plain-primary_active{
+        background: #009FF2 !important;
+        color: #ffffff !important;
+      }
+    }
+}

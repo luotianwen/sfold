@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans.xsd  
+    http://code.alibabatech.com/schema/dubbo  
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    
+	<!-- 具体的实现bean -->
+	<bean id="sysUserService" class="com.shifeng.provide.sysuser.service.impl.SysUserServiceImpl" /> 
+	
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<!-- owner 应用配置负责人、组织  dubbo:service、dubbo:reference没有配置负责人，则使用dubbo:application设置的负责人。 -->	
+	<dubbo:application name="sf_provider" owner="WinZhong" organization="dubbox"/>
+	
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry address="zookeeper://192.168.1.222:2181" />
+	
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="1314"  serialization="kryo"  optimizer="com.shifeng.common.SerializationOptimizerImpl"/>
+	
+	<!-- 声明需要暴露的服务接口 -->
+	<dubbo:service interface="com.shifeng.provide.sysuser.service.SysUserService" ref="sysUserService"  timeout="1200000" /> 
+	
+
+	
+</beans>

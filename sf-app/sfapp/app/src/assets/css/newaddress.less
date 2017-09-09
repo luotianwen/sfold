@@ -1,0 +1,38 @@
+@font-size-base: 75;
+
+.new_address{
+    font-family: "microsoft yahei";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ededed;
+    z-index:400
+}
+.new_header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    .save{
+        float: right;
+        margin-right: 28rem/@font-size-base;
+        color: #c9c9c9;
+    }
+}
+.new_content{
+   position: relative;
+   top: 88rem/@font-size-base;
+   .weui-cell{
+       &:active{
+           background: #FFFFFF !important;
+       }
+   }
+   .vux-popup-picker-select{
+       color: #999999 !important;
+       font-size: 26rem/@font-size-base;
+   }
+   .vux-popup-picker-header-menu{
+       color: #009ff2 !important;
+   }
+}

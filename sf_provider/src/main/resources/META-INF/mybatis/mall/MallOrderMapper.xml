@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!-- 商城订单Mapper -->
+<mapper namespace="mallOrderMapper">
+    
+   <!-- 获取预览订单店铺信息 -->
+   <select id="getPreviewShop" parameterType="java.util.ArrayList" resultType="com.shifeng.dto.mall.order.OrderPreviewInfoDTO">
+   		SELECT
+			p.shopid,s.name AS shopName
+		 FROM
+		 p_pro_rules pr 
+		LEFT JOIN p_product p ON pr.pid = p.id
+		LEFT JOIN s_shopinfo s ON p.shopid = s.s_merchants_id
+		WHERE
+			pr.sku IN 
+			<foreach collection="list" item="item" index="index" separator="," open="(" close=")">
+				 #{item.sku}
+			</foreach> 
+		GROUP BY p.shopid
+   </select>
+    
+   <!-- 获取预览订单商品信息 -->
+   <select id="getPreviewWare" parameterType="java.util.ArrayList" resultType="com.shifeng.dto.mall.order.OrderPreviewWareInfoDTO">
+			SELECT
+				pr.sku ,p.shopid  ,p.name AS pName
+				,co.name AS colorName
+				,sp.name AS specName
+				,si.ipath AS colorPic
+				,p.state AS pState
+				,activityprice
+				,p.logo
+				,pr.marketprice,pr.price
+				,pr.starttime,pr.endtime,pr.activitytype,pr.activityprice
+			 FROM
+			 p_pro_rules pr 
+			LEFT JOIN p_product p ON pr.pid = p.id
+			LEFT JOIN p_sku_images si ON pr.colorid = si.colorid AND ismain = 1 AND si.pid = pr.pid
+			LEFT JOIN p_color co ON co.id = pr.colorid AND co.pid = pr.pid
+			LEFT JOIN p_spec sp ON pr.specid = sp.id
+			WHERE
+				pr.sku IN 
+			<foreach collection="list" item="item" index="index" separator="," open="(" close=")">
+				 #{item.sku}
+			</foreach> 
+			ORDER BY p.shopid
+   </select>
+   
+   
+   
+
+	<!-- 保存订单 -->
+	<insert id="saveOrderInfo" parameterType="com.shifeng.entity.order.OrderInfo">
+		insert into o_orderInfo
+			(
+		      orderId,subTime, sellerId, userId, receiveName, phoneNumber, address, zipCode, giftPoints, invoiceType, invoiceNumber, isSettlement, settlementTime, userConfirmTime, orderStatus, orderType, remark, lastModifiedTime, defaultPayment, sellerRemark, ip, pay_serial_number, onlinepayfee, perentId, order_total_price, seller_discount, order_seller_price, totalMoney, order_payment, freight_price, payment_confirm_time, refundMoney, paidMoney, unPaidMoney 
+			)
+		values
+			(
+			 #{orderId},
+		      #{subTime},
+		      #{sellerId},
+		      #{userId},
+		      #{receiveName},
+		      #{phoneNumber},
+		      #{address},
+		      #{zipCode},
+		      #{giftPoints},
+		      #{invoiceType},
+		      #{invoiceNumber},
+		      #{isSettlement},
+		      #{settlementTime},
+		      #{userConfirmTime},
+		      #{orderStatus},
+		      #{orderType},
+		      #{remark},
+		      #{lastModifiedTime},
+		      #{defaultPayment},
+		      #{sellerRemark},
+		      #{ip},
+		      #{pay_serial_number},
+		      #{onlinepayfee},
+		      #{perentId},
+		      #{order_total_price},
+		      #{seller_discount},
+		      #{order_seller_price},
+		      #{totalMoney},
+		      #{order_payment},
+		      #{freight_price},
+		      #{payment_confirm_time},
+		      #{refundMoney},
+		      #{paidMoney},
+		      #{unPaidMoney}
+			)
+	</insert>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+	
+	
+   
+</mapper>

@@ -1,0 +1,239 @@
+@font-size-base: 75;
+
+.mine {
+    font-family: "microsoft yahei";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ededed;
+}
+.mine_user{
+    position: relative;
+    width: 100%;
+    height: 250rem/@font-size-base;   
+    .user_msg{
+        position: relative;
+        width: auto;
+        height: 100%;
+        float: left;
+        .head_img{
+            float: left;
+            position: relative;
+            display: inline-block;
+            width: 138rem/@font-size-base;
+            height: 138rem/@font-size-base;
+            margin-top: 50rem/@font-size-base;
+            margin-left: 30rem/@font-size-base;         
+            img{
+                width: 100%;
+                height: 100%;
+                z-index: 99;
+            }
+            i{
+                display: inline-block;
+                width: 28rem/@font-size-base;
+                height: 28rem/@font-size-base;
+                border-radius: 50%;
+                position: absolute;
+                right: 6rem/@font-size-base;
+                bottom: 6rem/@font-size-base;
+                z-index: 100;
+            }
+        }
+        .user_name{
+            position: relative;
+            float: left;
+            margin-top: 80rem/@font-size-base;
+            margin-left: 32rem/@font-size-base;
+            font-size: 32rem/@font-size-base;
+            color: #ffffff;
+            span{
+                a{
+                    color: #ffffff;
+                }
+            }
+        }
+        
+    }
+    &.not{
+        background: #467e84;
+        .head_img{
+            background: url(../image/mine/tx_img_2.png) no-repeat;
+            background-size: 100%;             
+        }       
+    }
+    &.already{
+        background: #009ff2;
+        .head_img{
+            background: url(../image/mine/tx_img_1.png) no-repeat;
+            background-size: 100%;
+            .man{
+                background: url(../image/mine/man_img.png) no-repeat;
+                background-size: 100%;
+                z-index: 100;
+            }
+            .woman{
+                background: url(../image/mine/woman_img.png) no-repeat;
+                background-size: 100%;
+                z-index: 100;
+            }             
+        }
+    }
+    .menu{
+        width: auto;
+        height: 100%;
+        float: right;
+        .menu_set{
+            float: right;
+            width: 38rem/@font-size-base;
+            height: 36rem/@font-size-base;
+            display: inline-block;
+            background: url(../image/mine/menu_set_img.png) no-repeat;
+            background-size: 100%;
+            margin-top: 25rem/@font-size-base;
+            margin-right: 46rem/@font-size-base;   
+        }
+        .menu_news{
+            float: right;
+            width: 36rem/@font-size-base;
+            height: 38rem/@font-size-base;
+            background: url(../image/mine/menu_news_img.png) no-repeat;
+            background-size: 100%;
+            margin-top: 25rem/@font-size-base;
+            margin-right: 36rem/@font-size-base;   
+        }
+    }
+}
+
+.browsing_history{
+    width: 100%;
+    height: 120rem/@font-size-base;
+    background: #ffffff;
+    border-bottom: 18rem/@font-size-base solid #ededed;
+    ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-weight: 500;
+        li{
+            flex: 1;
+            text-align: center;
+            span{
+                display: block;
+                width: 100%;
+                height: 71rem/@font-size-base;
+                line-height: 71rem/@font-size-base;
+                font-size: 28rem/@font-size-base;
+                color: #3d4245;
+            }
+            i{
+                font-size: 24rem/@font-size-base;
+                color: #3d4245;
+            }
+        }
+    }
+}
+.buy_msg{
+    border-bottom: 18rem/@font-size-base solid #ededed;
+    .weui-cell{
+        padding: 0 28rem/@font-size-base !important;
+        height: 88rem/@font-size-base;
+        line-height: 88rem/@font-size-base;
+        .vux-cell-bd{
+            font-size: 28rem/@font-size-base;
+        }
+        .weui-cell__ft{
+            font-size: 26rem/@font-size-base;
+        }
+    }
+    .vux-no-group-title{
+        margin-top: 0 !important;
+    }
+    .line_item{
+        width: 100%;
+        height: 154rem/@font-size-base;
+        background: #ffffff;
+        ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            li{
+                flex: 1;
+                text-align: center;
+                img{
+                    width: 34rem/@font-size-base;
+                    margin-top: 37rem/@font-size-base;
+                }
+                i{
+                    display: block;
+                    width: 100%;
+                    font-size: 22rem/@font-size-base;
+                    color: #707070;
+                    padding-top: 22rem/@font-size-base;
+                    font-weight: 500;
+                }
+            }
+        }
+    }    
+}
+.rest_function{
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    ul{
+        width: 100%;
+        height: 154rem/@font-size-base;
+        display: flex;
+        li{
+            flex: 1;
+            text-align: center;     
+            i{
+                display: block;
+                width: 100%;
+                font-size: 22rem/@font-size-base;
+                color: #707070;
+                font-weight: 500;
+            }
+            &.distributor{
+                img{
+                    width: 48rem/@font-size-base;
+                    height: 44rem/@font-size-base;
+                    margin-top: 31rem/@font-size-base;
+                }
+                i{
+                    padding-top: 22rem/@font-size-base;
+                }
+            }
+            &.discount_coupon{
+                img{
+                    width: 48rem/@font-size-base;
+                    height: 48rem/@font-size-base;
+                    margin-top: 29rem/@font-size-base;
+                }
+                i{
+                    padding-top: 22rem/@font-size-base;
+                }
+            }
+            &.sfcard{
+                img{
+                    width: 50rem/@font-size-base;
+                    height: 36rem/@font-size-base;
+                    margin-top: 35rem/@font-size-base;
+                }
+                i{
+                    padding-top: 28rem/@font-size-base;
+                }
+            }
+            &.service{
+                img{
+                    width: 46rem/@font-size-base;
+                    height: 46rem/@font-size-base;
+                    margin-top: 30rem/@font-size-base;
+                }
+                i{
+                    padding-top: 21rem/@font-size-base;
+                }
+            }
+        }
+    }
+}

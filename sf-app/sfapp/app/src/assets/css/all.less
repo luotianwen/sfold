@@ -1,0 +1,296 @@
+@font-size-base: 75;
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+a {
+    color: #3d4245;
+    text-decoration: none;
+}
+
+
+/* IE < 8 */
+
+
+/*弹窗样式*/
+
+.weui-dialog {
+    font-family: "microsoft yahei";
+    border-radius: 24rem/@font-size-base !important;
+    max-width: 600rem/@font-size-base !important;
+    .weui-dialog__hd {
+        height: auto;
+    }
+    .weui-dialog__bd {
+        height: 149rem/@font-size-base;
+        line-height: 149rem/@font-size-base !important;
+        color: #161616 !important;
+        font-size: 30rem/@font-size-base !important;
+    }
+    .weui-dialog__ft {
+        height: 88rem/@font-size-base !important;
+        line-height: 88rem/@font-size-base !important;
+        font-size: 30rem/@font-size-base !important;
+        color: #009ff2 !important;
+        .weui-dialog__btn_default {
+            color: #3d4245 !important;
+        }
+        .weui-dialog__btn_primary {
+            color: #009ff2 !important;
+        }
+    }
+}
+
+
+/*头部*/
+
+.vux-header {
+    height: 88rem/@font-size-base !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: #fff !important;
+    position: relative;
+    box-sizing: initial !important;
+    border-bottom: 1px solid #ededed;
+    .vux-header-left {
+        left: 0 !important;
+        top: 0 !important;
+        .left-arrow {
+            height: 88rem/@font-size-base !important;
+            width: 66rem/@font-size-base !important;
+            top: 0 !important;
+            left: 0 !important;
+            &:before {
+                width: 24rem/@font-size-base !important;
+                height: 24rem/@font-size-base !important;
+                left: 34rem/@font-size-base !important;
+                top: 30rem/@font-size-base !important;
+                border: 2px solid #000 !important;
+                border-width: 1px 0 0 1px !important;
+            }
+        }
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .vux-header-title {
+        margin: 0 !important;
+        line-height: 88rem/@font-size-base !important;
+        text-align: center;
+        height: 88rem/@font-size-base !important;
+        font-size: 32rem/@font-size-base !important;
+        font-weight: 600;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #161616 !important;
+        .back_btn {
+            position: absolute;
+            display: block;
+            float: left;
+            height: 88rem/@font-size-base !important;
+            width: 66rem/@font-size-base !important;
+            top: 0 !important;
+            left: 0 !important;
+            i {
+                display: inline-block;
+                width: 20rem/@font-size-base;
+                height: 34rem/@font-size-base;
+                background: url(../image/set/Back_btn_img.png) no-repeat;
+                background-size: 100%;
+                margin-top: 32rem/@font-size-base;
+            }
+        }
+        .close_btn {
+            position: absolute;
+            display: block;
+            float: left;
+            height: 88rem/@font-size-base !important;
+            width: 66rem/@font-size-base !important;
+            top: 0 !important;
+            left: 0 !important;
+            i {
+                display: inline-block;
+                width: 30rem/@font-size-base;
+                height: 30rem/@font-size-base;
+                background: url(../image/set/close_btn_img.png) no-repeat;
+                background-size: 100%;
+                margin-top: 35rem/@font-size-base;
+                margin-left: 10rem/@font-size-base;
+            }
+        }
+    }
+    .vux-header-right {
+        right: 34rem/@font-size-base !important;
+        top: 20rem/@font-size-base !important;
+        a {
+            color: #5f646e !important;
+            &:after {
+                font-size: 24rem/@font-size-base !important;
+            }
+        }
+    }
+}
+
+
+/*cell*/
+
+.weui-cells {
+    font-size: 28rem/@font-size-base !important;
+    color: #3d4245 !important;
+    font-weight: 900 !important;
+    .weui-cell {
+        padding: 24rem/@font-size-base 30rem/@font-size-base !important;
+        &:active {
+            background-color: #d9d9d9;
+        }
+        .weui-cell__ft {
+            right: 40rem/@font-size-base;
+            &:after {
+                float: right;
+                right: -20rem/@font-size-base;
+                height: 16rem/@font-size-base !important;
+                width: 16rem/@font-size-base !important;
+                border: 1px solid #aaaaaa !important;
+                border-width: 2px 2px 0 0 !important;
+                margin-top: -8rem/@font-size-base !important;
+            }
+            span {
+                font-size: 26rem/@font-size-base;
+            }
+        }
+    }
+}
+
+.vux-no-group-title {
+    margin-top: 18rem/@font-size-base !important;
+}
+
+
+/*Actionsheet*/
+
+.weui-actionsheet__cell {
+    height: 98rem/@font-size-base !important;
+    font-size: 30rem/@font-size-base !important;
+    line-height: 98rem/@font-size-base !important;
+    padding: 0 !important;
+}
+
+.weui-actionsheet__action {
+    color: #009FF2 !important;
+}
+
+
+/*提示*/
+
+.vux-toast {
+    .weui-toast {
+        width: auto !important;
+        padding: 0 20rem/@font-size-base !important;
+        .weui-toast__content {
+            margin: 10rem/@font-size-base 0 10rem/@font-size-base !important;
+            font-size: 30rem/@font-size-base !important;
+            line-height: 44rem/@font-size-base;
+        }
+    }
+}
+
+
+/*遮罩*/
+
+.xs-plugin-pullup-container {
+    position: relative !important;
+    line-height: 40px;
+    bottom: 0 !important;
+}
+
+
+/*vux-popup*/
+
+.vux-popup-dialog {
+    height: 583rem/@font-size-base !important;
+    .ditch_msg {
+        color: #161616;
+        float: left;
+        h1 {
+            font-size: 32rem/@font-size-base;
+            width: 100%;
+            text-align: center;
+            margin-top: 32rem/@font-size-base;
+        }
+        .ditch_classify {
+            float: left;
+            width: 100%;
+            height: auto;
+            margin-top: 37rem/@font-size-base;
+            .ditch_item1,
+            .ditch_item2 {
+                display: inline-block;
+                width: 100rem/@font-size-base;
+                height: auto;
+                margin-left: 74rem/@font-size-base;
+                float: left;
+                img {
+                    width: 100rem/@font-size-base;
+                    height: 100rem/@font-size-base;
+                }
+                span {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 16rem/@font-size-base;
+                }
+            }
+            .ditch_item2 {
+                margin-top: 54rem/@font-size-base;
+            }
+        }
+    }
+    .off_btn {
+        float: left;
+        width: 100%;
+        height: 98rem/@font-size-base;
+        margin-top: 48rem/@font-size-base;
+        button {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #ffffff;
+            font-size: 30rem/@font-size-base;
+            color: #161616;
+        }
+    }
+}
+
+.l_header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    .vux-header {
+        border: 0 !important;
+    }
+}
+
+sup {
+    position: absolute;
+    top: 5px;
+    left: 73%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 101;
+}

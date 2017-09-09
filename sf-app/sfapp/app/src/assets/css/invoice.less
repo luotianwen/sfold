@@ -1,0 +1,131 @@
+@font-size-base: 75;
+.invoice {
+    font-family: "microsoft yahei";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ededed;
+    .i_header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+    .i_content {
+        position: relative;
+        top: 106rem/@font-size-base;
+        width: 100%;
+        height: auto;
+        .weui-cells:after {
+            margin: 0 22rem/@font-size-base;
+        }
+        .vux-label {
+            font-size: 28rem/@font-size-base;
+            color: #3d4245;
+        }
+        .genre {
+            background-color: #fff;
+            padding: 0 22rem/@font-size-base;
+            .title {
+                font-size: 28rem/@font-size-base;
+                color: #3d4245;
+                padding-top: 33rem/@font-size-base;
+            }
+            .o_name {
+                padding-top: 24rem/@font-size-base;
+                padding-bottom: 30rem/@font-size-base;
+                span {
+                    display: inline-block;
+                    width: 118rem/@font-size-base;
+                    height: 38rem/@font-size-base;
+                    text-align: center;
+                    line-height: 38rem/@font-size-base;
+                    border: 1px solid #06B639;
+                    border-radius: 3px;
+                    color: #06B639;
+                }
+            }
+        }
+        .particulars {
+            margin-top: 18rem/@font-size-base;
+            padding: 0 22rem/@font-size-base;
+            background-color: #fff;
+            .title {
+                font-size: 28rem/@font-size-base;
+                color: #3d4245;
+                padding-top: 33rem/@font-size-base;
+            }
+            .rise {
+                .option {
+                    height: 110rem/@font-size-base;
+                    span {
+                        position: relative;
+                        margin-top: 40rem/@font-size-base;
+                        float: left;
+                        font-size: 24rem/@font-size-base;
+                        line-height: 30rem/@font-size-base;
+                        color: #3d4245;
+                        padding-left: 55rem/@font-size-base;
+                        i {
+                            position: absolute;
+                            left: 0;
+                            display: inline-block;
+                            width: 30rem/@font-size-base;
+                            height: 30rem/@font-size-base;
+                            background: url(../image/set/opt_img_2.png) no-repeat;
+                            background-size: 100%;
+                        }
+                        &.active {
+                            i {
+                                background: url(../image/set/opt_img_1.png) no-repeat;
+                                background-size: 100%;
+                            }
+                        }
+                        &.personage {
+                            margin-right: 50rem/@font-size-base;
+                        }
+                    }
+                }
+                .weui-cells{
+                    padding-bottom: 40rem/@font-size-base;
+                }
+                .vux-x-input{
+                    background-color: #ededed;
+                }
+            }
+        }
+        .whether_bill {
+            background-color: #fff;
+            .option {
+                padding-bottom: 40rem/@font-size-base;
+                span {
+                    font-size: 24rem/@font-size-base;
+                    display: block;
+                    padding: 0 22rem/@font-size-base;
+                    line-height: 30rem/@font-size-base;
+                    color: #3d4245;
+                    &.active {
+                        i {
+                            background: url(../image/cart/opt_img_1.png) no-repeat;
+                            background-size: 100%;
+                        }
+                    }
+                    i {
+                        display: inline-block;
+                        float: left;
+                        width: 30rem/@font-size-base;
+                        height: 30rem/@font-size-base;
+                        background: url(../image/cart/opt_img_2.png) no-repeat;
+                        background-size: 100%;
+                        margin-right: 22rem/@font-size-base;
+                    }
+                    &.y_bill {
+                        margin-top: 50rem/@font-size-base;
+                        margin-bottom: 50rem/@font-size-base;
+                    }
+                }
+            }
+        }
+    }
+}

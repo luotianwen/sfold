@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!-- 用户表(SysUser)Mapper -->
+<mapper namespace="SysUserMapper">
+    <!--mybatis ehcache缓存配置 -->
+    <!-- 以下两个<cache>标签二选一,第一个可以输出日志,第二个不输出日志 不使用缓存加入useCache="false" -->
+    <!-- <cache type="org.mybatis.caches.ehcache.LoggingEhcache" /> -->
+    <!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>  -->
+
+	<sql id="Base_Column_List">
+    	id,account ,password ,name ,phone ,province ,city ,region ,address ,postcode ,portrait ,sex ,email ,integral ,coin ,birthday ,state ,rtime ,lasttime ,updatename 
+    </sql>
+
+    <resultMap type="com.shifeng.entity.SysUser" id="SysUserReturnMap">
+		<!-- id -->
+      <id column="id" property="id"/>
+		<!-- 用户登录名 -->
+      <result column="account" property="account"/>
+		<!-- 密码 -->
+      <result column="password" property="password"/>
+		<!-- 用户姓名 -->
+      <result column="name" property="name"/>
+		<!-- 手机号 -->
+      <result column="phone" property="phone"/>
+		<!-- 省份 -->
+      <result column="province" property="province"/>
+		<!-- 城市 -->
+      <result column="city" property="city"/>
+		<!-- 区 -->
+      <result column="region" property="region"/>
+		<!-- 地址 -->
+      <result column="address" property="address"/>
+		<!-- 邮编 -->
+      <result column="postcode" property="postcode"/>
+		<!-- 照片 -->
+      <result column="portrait" property="portrait"/>
+		<!-- 性别 -->
+      <result column="sex" property="sex"/>
+		<!-- 邮箱 -->
+      <result column="email" property="email"/>
+		<!-- 积分 -->
+      <result column="integral" property="integral"/>
+		<!-- 硬币 -->
+      <result column="coin" property="coin"/>
+		<!-- 出生日期 -->
+      <result column="birthday" property="birthday"/>
+		<!-- 状态(1正常 2冻结) -->
+      <result column="state" property="state"/>
+		<!-- 注册时间 -->
+      <result column="rtime" property="rtime"/>
+		<!-- 最后修改时间 -->
+      <result column="lasttime" property="lasttime"/>
+		<!-- 最后修改人 -->
+      <result column="updatename" property="updatename"/>
+   </resultMap>
+   
+   
+   
+   <!-- 根据用户id修改用户状态 -->
+   <update id="updateUserState" parameterType="int" >
+   		update 
+   			sys_user 
+   		set 
+   			state = #{array[1]} 
+   			,lasttime = NOW()
+   		where
+   			id = #{array[0]}
+   </update>
+  
+	
+</mapper>

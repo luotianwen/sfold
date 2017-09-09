@@ -1,0 +1,57 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-alipay": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/charleyw/cordova-plugin-alipay.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "PARTNER_ID": "2088701539723278",
+            "SELLER_ACCOUNT": "837978734@qq.com",
+            "PRIVATE_KEY": "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKpAWujv/1sAVcif/iT9YGlpCHP4QTt+DZZaWvHiaAsKnDQurhVTgsMAjBTmjVcSeUYNcWQ+k9r+DMIzbI3G8rgkwppVYItrd3N2r5UIEkymsyhm9eVnqgqfc7mYtwPH9qkiSe13BvfS6e4o5UIUsc6JMTkbnTcIwHLhUCi4L4A1AgMBAAECgYBoyNMrKwtvZvVlVZOGEKyWNB8PwWvkweB6+YGf/kkrAozBUTmzxoJkoqGU+5FiVexuQTfZCurVjicsH5pgaGJaEpeSO3TXz3t1SAneNKEddtQTbrcQBAQ+pJkT9p8YvXXbb1lT+2ZAhf0Az049rWjLzJMG7qh/BAJ4HT6/FEXcwQJBANkU0r8PKGgHXRYWRxG80HidnhrxnwFS9a2ph7BMnq4ky/fXMId6gd8djsPOza94IYjUx4y8Ndt2Iuc5aWnfhXsCQQDIxjjK+dUf86l/K34a5Skqay5HE2ne83KDw/I9ZBpiVU+ThOTQTwz6AiY/UXj+HS8mjNv3+9PovJPP5z8iaaoPAkBuoDP99cWLriT7+oJhQa2jqf9Gj9eOHy7gP0LMz18WM95WAS3T/NRuVWvJ0Xv0be35AyZmTAvOOVf0KcfUkno9AkBxgbc78ZBvFvc9YR5TIDlstNmd7zjMhf+4xL+fu4c7DpYFhX1C0143vZ1X8LyhlWhBuCLoCOQd0PcT8916nBg7AkA25UueyeMLaU7g0S/EbbDTl4dP+kBXxYvNzDuDQygHV5aX8SSSCojT+dMfQVqihkZ87o0k+MGSBTnvfr0aKkS4"
+        }
+    },
+    "cordova-plugin-wechat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-wechat"
+        },
+        "is_top_level": true,
+        "variables": {
+            "WECHATAPPID": "wx2e1deda16bcced1d"
+        }
+    },
+    "cordova-plugin-camera": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-camera"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

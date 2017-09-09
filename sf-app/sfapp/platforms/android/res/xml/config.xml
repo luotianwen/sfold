@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.cordova.sfapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="AliPay">
+        <param name="android-package" value="wang.imchao.plugin.alipay.AliPayPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Wechat">
+        <param name="android-package" value="xu.li.cordova.wechat.Wechat" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <name>sfapp</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="partner" value="2088701539723278" />
+    <preference name="seller" value="837978734@qq.com" />
+    <preference name="privatekey" value="MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKpAWujv/1sAVcif/iT9YGlpCHP4QTt+DZZaWvHiaAsKnDQurhVTgsMAjBTmjVcSeUYNcWQ+k9r+DMIzbI3G8rgkwppVYItrd3N2r5UIEkymsyhm9eVnqgqfc7mYtwPH9qkiSe13BvfS6e4o5UIUsc6JMTkbnTcIwHLhUCi4L4A1AgMBAAECgYBoyNMrKwtvZvVlVZOGEKyWNB8PwWvkweB6+YGf/kkrAozBUTmzxoJkoqGU+5FiVexuQTfZCurVjicsH5pgaGJaEpeSO3TXz3t1SAneNKEddtQTbrcQBAQ+pJkT9p8YvXXbb1lT+2ZAhf0Az049rWjLzJMG7qh/BAJ4HT6/FEXcwQJBANkU0r8PKGgHXRYWRxG80HidnhrxnwFS9a2ph7BMnq4ky/fXMId6gd8djsPOza94IYjUx4y8Ndt2Iuc5aWnfhXsCQQDIxjjK+dUf86l/K34a5Skqay5HE2ne83KDw/I9ZBpiVU+ThOTQTwz6AiY/UXj+HS8mjNv3+9PovJPP5z8iaaoPAkBuoDP99cWLriT7+oJhQa2jqf9Gj9eOHy7gP0LMz18WM95WAS3T/NRuVWvJ0Xv0be35AyZmTAvOOVf0KcfUkno9AkBxgbc78ZBvFvc9YR5TIDlstNmd7zjMhf+4xL+fu4c7DpYFhX1C0143vZ1X8LyhlWhBuCLoCOQd0PcT8916nBg7AkA25UueyeMLaU7g0S/EbbDTl4dP+kBXxYvNzDuDQygHV5aX8SSSCojT+dMfQVqihkZ87o0k+MGSBTnvfr0aKkS4" />
+    <preference name="WECHATAPPID" value="wx2e1deda16bcced1d" />
+</widget>

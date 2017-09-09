@@ -1,0 +1,176 @@
+@font-size-base: 75;
+
+.mgm {
+    font-family: "microsoft yahei";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ededed;
+}
+.mgm_header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88;
+}
+.mgm_content {
+    position: relative;
+    top: 88rem/@font-size-base;
+    margin-bottom: 98rem/@font-size-base;
+    background: #ededed;
+    width: 100%;
+    height: auto;
+    .basic_cement {
+        background: #ededed;
+        margin: 0 auto;
+        i {
+            display: block;
+            width: 180rem/@font-size-base;
+            height: 180rem/@font-size-base;
+            margin: 331rem/@font-size-base auto 0;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            width: 100%;
+            margin-top: 24rem/@font-size-base;
+            text-align: center;
+            color: #707070;
+            font-size: 28rem/@font-size-base;
+        }
+    }
+    .address_msg {
+        font-family: "microsoft yahei";
+        margin-top: 18rem/@font-size-base !important;
+        background: #fff;
+        width: 100%;
+        font-size: 28rem/@font-size-base;
+        color: #3d4245;
+        .a_msg_1 {
+            height: 88rem/@font-size-base;
+            padding: 0 28rem/@font-size-base;
+            display: flex;
+            li {
+                height: 100%;
+                line-height: 88rem/@font-size-base;
+                flex: 1;
+
+                &.a_msg_first {
+                    text-align: left;
+                }
+                &.a_msg_last {
+                    text-align: right;
+                }
+            }
+        }
+        .a_msg_2 {
+            height: 88rem/@font-size-base;
+            padding: 10rem/@font-size-base 28rem/@font-size-base;
+            line-height: 44rem/@font-size-base;
+        }
+        .a_msg_3 {
+            height: 88rem/@font-size-base;
+            margin-top: 25rem/@font-size-base;
+            font-size: 24rem/@font-size-base;
+            background: #ffffff;
+            .opt_img {
+                display: inline-block;
+                float: left;
+                width: 30rem/@font-size-base;
+                height: 30rem/@font-size-base;
+                margin-right: 8rem/@font-size-base;
+                margin-top: 28rem/@font-size-base;
+                margin-left: 28rem/@font-size-base;
+            }
+            .opt_msg {
+                height: 88rem/@font-size-base;
+                line-height: 88rem/@font-size-base;
+                color: #999999;
+                i {
+                    color: #3d4245;
+                }
+            }
+            .default_class {
+                float: left;
+                width: 100%;
+                .opt_img {
+                    background: url("../image/set/opt_img_2.png") no-repeat;
+                    background-size: 100%;
+                    border-radius: 50%;
+                }
+                .opt_msg {
+                    color: #3d4245;
+                }
+            }
+            .selected_class {
+                float: left;
+                width: 100%;
+                .opt_img {
+                    background: url("../image/set/opt_img_1.png") no-repeat;
+                    background-size: 100%;
+                }
+                .opt_msg {
+                    color: #009ff2;
+                }
+            }
+            .compile {
+                height: 100%;
+                float: right;
+                margin-right: 24rem/@font-size-base;
+                font-size: 24rem/@font-size-base;
+                i {
+                    display: inline-block;
+                    width: 32rem/@font-size-base;
+                    height: 32rem/@font-size-base;
+                    background: url("../image/set/compile.png") no-repeat;
+                    margin-right: 8rem/@font-size-base;
+                    position: relative;
+                    background-size: 100%;
+                    top: 5rem/@font-size-base;
+                }
+                em {
+                    display: inline-block;
+                    height: 100%;
+                    line-height: 88rem/@font-size-base;
+                }
+            }
+            .omit {
+                height: 100%;
+                float: right;
+                font-size: 24rem/@font-size-base;
+                margin-right: 28rem/@font-size-base;
+                i {
+                    display: inline-block;
+                    width: 32rem/@font-size-base;
+                    height: 32rem/@font-size-base;
+                    background: url("../image/set/omit.png") no-repeat;
+                    margin-right: 8rem/@font-size-base;
+                    position: relative;
+                    background-size: 100%;
+                    top: 5rem/@font-size-base;
+                }
+                em {
+                    display: inline-block;
+                    height: 100%;
+                    line-height: 88rem/@font-size-base;
+                }
+            }
+        }
+    }
+}
+
+.new_btn {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    .weui-btn_primary {
+        height: 98rem/@font-size-base !important;
+        font-size: 30rem/@font-size-base !important;
+        background: #009ff2 !important;
+        border-radius: 0 !important;
+    }
+}

@@ -1,0 +1,57 @@
+@font-size-base: 75;
+
+.pay {
+    font-family: "microsoft yahei";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    .p_header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+    .p_content{
+        .pc_title{
+            width: 100%;
+            height: 88rem/@font-size-base;
+            background-color: #fff;
+            margin-top: 18rem/@font-size-base;
+            display: flex;
+            color: #999999;
+            border-bottom: 1px solid #e0e0e0;
+            div{
+                display: inline-block;
+                flex: 1;
+                height: 88rem/@font-size-base;
+                line-height: 88rem/@font-size-base;
+                &.order_amount{
+                    padding-left: 22rem/@font-size-base;
+                    text-align: left;
+                    font-size: 28rem/@font-size-base;
+                }
+                &.oa_num{
+                    text-align: right;
+                    padding-right: 22px;
+                    color: #FF5B28;
+                    font-weight: 500;                   
+                    i{
+                        font-size: 20rem/@font-size-base;
+                    }
+                    .integer{
+                        font-size: 32rem/@font-size-base;
+                        
+                    }
+                    .decimals{
+                        font-size: 24rem/@font-size-base;
+                    }
+                }
+            }
+        }
+    }   
+}
+.weui-cells {
+    margin-top: 0 !important;
+}
